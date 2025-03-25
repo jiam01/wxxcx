@@ -1,0 +1,81 @@
+/* 修改颜色主题 */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9; /* 背景色 */
+}
+
+.avatar-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.change-avatar-button {
+  margin-top: 15px;
+  background-color: #00a878; /* 更改按钮颜色 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.change-avatar-button:hover {
+  background-color: #00865e; /* 鼠标悬停时的颜色 */
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* 字体颜色 */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px; /* 字体大小 */
+  transition: border-color 0.3s; /* 添加过渡效果 */
+}
+
+input:focus {
+  border-color: #00a878; /* 聚焦时的颜色 */
+}
+
+.gender-picker {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px; /* 字体大小 */
+  background-color: #fff; /* 背景色 */
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的颜色 */
+}

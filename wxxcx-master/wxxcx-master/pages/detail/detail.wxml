@@ -1,0 +1,13 @@
+<view class="container">
+    <text class="title">{{detail.title}}</text>
+    <text class="subtitle">{{detail.subtitle}}</text>
+    <text class="author">{{detail.author}}</text>
+  
+    <!-- 动态渲染内容 -->
+    <block wx:if="{{detail.content.type === 'video'}}">
+      <video class="video" src="{{detail.content.src}}" controls></video>
+    </block>
+    <block wx:else>
+      <rich-text nodes="{{detail.content}}"></rich-text>
+    </block>
+  </view>

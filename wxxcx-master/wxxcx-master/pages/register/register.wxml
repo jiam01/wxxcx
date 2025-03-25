@@ -1,0 +1,27 @@
+<view class="container">
+  <form bindsubmit="handleRegister">
+    <view class="input-group">
+      <input 
+        name="account" 
+        type="number" 
+        placeholder="请输入手机号"
+        maxlength="11"
+        value="{{account}}"
+      />
+      <input 
+        name="password" 
+        password 
+        placeholder="请输入密码"
+        value="{{password}}"
+      />
+    </view>
+
+    <view class="button-group">
+      <button form-type="submit" type="primary" loading="{{loading}}">注册</button>
+      <button bindtap="handleCancel">取消</button>
+      <navigator url="/pages/login/login" open-type="navigateBack">
+        <text class="link">已有账号？立即登录</text>
+      </navigator>
+    </view>
+  </form>
+</view>

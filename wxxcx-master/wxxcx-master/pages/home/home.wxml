@@ -1,0 +1,95 @@
+<!-- home.wxml -->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" duration="500">
+    <swiper-item>
+      <image src="http://localhost:3000/download/4eeb2546-849a-4e02-a45b-fb7dcf72d928.jpg" class="slide-image"
+        mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://localhost:3000/download/2ec07cca-4053-412e-b461-c00df26d6a05.png" class="slide-image"
+        mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://localhost:3000/download/8a937cc3-606b-46c1-8691-06fe61069530.png" class="slide-image"
+        mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 快捷入口
+  <view class="quick-entry">
+    <view class="entry-item" bindtap="navigateToPage" data-page="consult">
+      <image src="/images/consult.png" class="icon"></image>
+      <text>在线问诊</text>
+    </view>
+    <view class="entry-item" bindtap="navigateToPage" data-page="appointment">
+      <image src="/images/appointment.png" class="icon"></image>
+      <text>预约挂号</text>
+    </view>
+    <view class="entry-item" bindtap="navigateToPage" data-page="report">
+      <image src="/images/report.png" class="icon"></image>
+      <text>报告查询</text>
+    </view>
+    <view class="entry-item" bindtap="navigateToPage" data-page="medicine">
+      <image src="/images/medicine.png" class="icon"></image>
+      <text>药品购买</text>
+    </view>
+  </view> -->
+
+  <!-- <view class="health-info">
+    <view class="info-title">健康宣教</view>
+    <view style="font-size: 15px;">康复线上指导</view>
+    <scroll-view class="info-list" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+      <view class="info-card" wx:for="{{healthArticles}}" wx:key="id" bindtap="viewArticle"
+  data-id="{{item.id}}">
+        <image class="card-image" src="{{item.cover}}" mode="aspectFill"></image>
+        <text class="card-title">{{item.title}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="recommended-services">
+    <view class="service-title">护理咨询</view>
+    <view style="font-size: 15px;">护理线上指导</view>
+    <view class="service-list">
+      <view class="service-item" wx:for="{{recommendedServices}}" wx:key="id" bindtap="selectService"
+  data-id="{{item.id}}">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view> -->
+  <view class="service-title recommended-services">常用功能</view>
+
+  <view class="function-buttons">
+    <view class="function-button" bindtap="navigateToPage" data-page="healthEducation">
+      <text class="button-text">健康宣教</text>
+      <text class="button-subtitle">了解更多健康知识</text>
+      <image class="button-icon" src="/images/icon/宣教.png"></image>
+    </view>
+    <view class="function-button" bindtap="navigateToPage" data-page="onlineCare">
+      <text class="button-text">线上护理</text>
+      <text class="button-subtitle">专业护理指导</text>
+      <image class="button-icon" src="/images/icon/kefu.png"></image>
+    </view>
+    <view class="function-button" bindtap="navigateToPage" data-page="onlineSurvey">
+      <text class="button-text">在线问卷</text>
+      <text class="button-subtitle">参与健康调查</text>
+      <image class="button-icon" src="/images/icon/问卷.png"></image>
+    </view>
+    <view class="function-button" bindtap="navigateToPage" data-page="faq">
+      <text class="button-text">常见问题</text>
+      <text class="button-subtitle">解答您的疑问</text>
+      <image class="button-icon" src="/images/icon/常见问题.png"></image>
+    </view>
+  </view>
+  <view class="health-info">
+    <view class="info-title">推荐</view>
+    <view style="font-size: 15px;">往期文章推荐</view>
+    <scroll-view class="info-list" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+      <view class="info-card" wx:for="{{healthArticles}}" wx:key="id" bindtap="viewArticle" data-id="{{item.id}}">
+        <image class="card-image" src="{{item.cover}}" mode="aspectFill"></image>
+        <text class="card-title">{{item.title}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
