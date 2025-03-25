@@ -1,8 +1,0 @@
-<view class="faq-container">
-  <block wx:for="{{faqList}}" wx:key="question">
-    <view class="faq-item">
-      <view class="faq-question">{{item.question}}</view>
-      <view class="faq-answer">{{item.answer}}</view>
-    </view>
-  </block>
-</view>
