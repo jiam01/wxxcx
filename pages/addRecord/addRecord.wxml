@@ -1,0 +1,72 @@
+<!-- pages/addRecord/addRecord.wxml -->
+<view class="container">
+  <!-- 癌症类别选择 -->
+  <view class="form-item">
+    <text class="label">癌症类别</text>
+    <picker mode="selector" range="{{cancerTypes}}" value="{{selectedCancerIndex}}" bindchange="onCancerTypeChange">
+      <view class="picker-box">
+        {{showOtherCancerInput ? otherCancerType : cancerTypes[selectedCancerIndex]}}
+      </view>
+    </picker>
+
+<block wx:if="{{showOtherCancerInput}}">
+  <input class="input" placeholder="请输入具体癌症类型" value="{{otherCancerType}}" bindinput="onOtherCancerChange" placeholder-style="color: #c0a58d;" />
+</block>
+  </view>
+
+  <!-- 疼痛位置 -->
+  <view class="form-item">
+    <text class="label">疼痛位置</text>
+    <input class="input" type="text" placeholder="请输入疼痛位置" value="{{painLocation}}" bindinput="onPainLocationChange" />
+  </view>
+
+<!-- 疼痛等级 -->
+<view class="form-item">
+  <text class="label">疼痛等级</text>
+  <slider class="slider" min="0" max="10" step="1" value="{{painLevel}}" bindchange="onPainLevelChange" />
+  <text class="slider-value" style="color: {{painLevelColor}};">{{painLevel}}</text>
+</view>
+
+  <!-- 开始时间 -->
+  <view class="form-item">
+    <text class="label">开始时间</text>
+    <picker mode="time" value="{{startTime}}" bindchange="onStartTimeChange">
+      <view class="picker">
+        {{startTime ? startTime : '选择开始时间'}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 结束时间 -->
+  <view class="form-item">
+    <text class="label">结束时间</text>
+    <picker mode="time" value="{{endTime}}" bindchange="onEndTimeChange">
+      <view class="picker">
+        {{endTime ? endTime : '选择结束时间'}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 药物名称 -->
+  <view class="form-item">
+    <text class="label">药物名称</text>
+    <input class="input" type="text" placeholder="请输入药物名称" value="{{medicationName}}" bindinput="onMedicationNameChange" />
+  </view>
+
+  <!-- 剂量 -->
+  <view class="form-item">
+    <text class="label">服用剂量</text>
+    <input class="input" type="text" placeholder="请输入服用剂量" value="{{dose}}" bindinput="onDoseChange" />
+  </view>
+
+  <!-- 备注 -->
+  <view class="form-item">
+    <text class="label">备注</text>
+    <textarea class="textarea" placeholder="请输入备注" value="{{notes}}" bindinput="onNotesChange" />
+  </view>
+
+  <!-- 保存按钮 -->
+<button class="save-button" bindtap="saveRecord" hover-class="save-button-hover">
+  保存记录
+</button>
+</view>

@@ -1,0 +1,112 @@
+/* 整体容器 */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f8ff; /* 更柔和的背景色 */
+}
+
+/* 顶部导航栏 */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #e0f7fa; /* 更柔和的背景色 */
+  border-bottom: 1rpx solid #ddd;
+}
+.doctor-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.doctor-info {
+  margin-left: 20rpx;
+}
+.doctor-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333; /* 更深的文字颜色 */
+}
+
+/* 消息展示区 */
+.message-list {
+  flex: 1;
+  padding: 20rpx;
+  overflow-y: auto;
+  background-color: #f9f9f9; /* 更柔和的背景色 */
+}
+.message-item {
+  display: flex;
+  margin-bottom: 20rpx;
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+.user-message {
+  justify-content: flex-end;
+}
+.doctor-message {
+  justify-content: flex-start;
+}
+.message-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.message-bubble {
+  max-width: 400rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+.user-message .message-bubble {
+  background-color: #a1c4fd;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+
+/* 输入框区域 */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background-color: #fff;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 55px;
+}
+.input-box {
+  height: 60rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 30rpx;
+  font-size: 28rpx; /* 调整字体大小 */
+  transition: border-color 0.3s ease; /* 添加过渡效果 */
+  flex: 1; /* 让输入框占据剩余空间 */
+  margin-right: 20rpx; /* 添加右边距 */
+}
+.input-box:focus {
+  border-color: #1aad19; /* 聚焦时的颜色 */
+}
+.send-btn {
+  width: 150rpx !important; 
+  height: 60rpx;
+  line-height: 60rpx; /* 确保文本居中 */
+  border-radius: 20rpx;
+  background-color: #1aad19;
+  color: #fff;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+  padding: 0;
+}
+.send-btn:active {
+  background-color: #148a14; /* 按下时的颜色 */
+}
+
+.message-item.assistant .bubble::after {
+  content: '▌';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0 }
+}

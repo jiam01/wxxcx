@@ -1,0 +1,13 @@
+<!-- pages/articleDetail/articleDetail.wxml -->
+<view class="container">
+  <!-- 标题区域 -->
+  <view class="header">
+    <text class="title">{{articleDetail.title}}</text>
+    <text class="time">{{articleDetail.createTime}}</text>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content">
+    <text user-select>{{articleDetail.content}}</text>
+  </view>
+</view>
